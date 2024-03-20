@@ -1,0 +1,109 @@
+@use "partials/reset";
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+h1,
+h2 {
+  @include heading-style;
+  text-decoration: underline;
+}
+
+body {
+  background-color: $primary-colour;
+  font-family: sans-serif;
+  padding: $body-padding;
+}
+
+div {
+  padding: $body-padding;
+}
+
+.card {
+  @include card(1rem);
+}
+
+// block
+/* also a comment */
+.product {
+  @include card(2rem, blue);
+
+  // element
+  &__title {
+    text-decoration: none;
+    color: black;
+
+    &--large {
+      font-size: 150%;
+    }
+  }
+
+  // element
+  &__image {
+    max-width: 80%;
+    border: 2px solid orange;
+  }
+
+  &--featured {
+    background: linear-gradient(red, orange);
+    color: white;
+  }
+}
+.form {
+  width: 100%;
+  margin-left: 1rem;
+  @include tablet {
+      
+  }
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__headings {
+    color: $color-silver;
+    @include form-label;
+  }
+  &__input {
+    color: $color-dark-sec;
+    font-family: $font-primary;
+    font-size: 1rem;
+    border-radius: .3em;
+    border: 1px solid $color-mercury-sec;
+    background-color: $color-Alabaster-sec;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    &:focus {
+      border: 1px solid $color-dark;
+      outline: none;
+      background-color: $color-white;
+    }
+    &--error {
+      border: 1px solid $color-error;
+    }
+    &--textarea {
+      @extend .form__input;
+      height: 5rem;
+    }
+   
+  }
+  &__submit {
+    @include styled-button;
+    color: $color-white;
+    background-color: $color-dark;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-radius: .3em;
+    width: 100%;
+    @include tablet {
+      max-width: 12rem;
+      align-self: flex-end;
+    }
+  }
+}
