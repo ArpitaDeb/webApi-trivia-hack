@@ -13,3 +13,36 @@
   border-radius: 1rem;
   box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.5);
 }
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+@mixin form-label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  padding-bottom: .3rem;
+  @include tablet {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+@mixin styled-button {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  &:hover {
+    background-color: $color-dark-sec;
+  }
+  @include tablet {
+    font-size: 1.25rem; 
+    font-weight: 500; 
+  }
+}

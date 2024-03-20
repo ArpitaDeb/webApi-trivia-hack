@@ -1,6 +1,6 @@
-@use "partials/reset";
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
+@use "../partials/reset";
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
 
 h1,
 h2 {
@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  background-color: aqua;
+  background-color: skyblue;
 }
 
 div {
@@ -60,14 +60,6 @@ div {
     background-color: $color-Alabaster-sec;
     padding: 1rem;
     margin-bottom: 1rem;
-    &:focus {
-      border: 1px solid $color-dark;
-      outline: none;
-      background-color: $color-white;
-    }
-    &--error {
-      border: 1px solid $color-error;
-    }
     &--textarea {
       @extend .form__input;
       height: 5rem;
