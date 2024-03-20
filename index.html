@@ -10,16 +10,18 @@
     <script src="./scripts/trivia-api.js" type="module" defer></script>
   </head>
   <body>
-    <h1 class="title">Who Wants to Be a Millionaire?</h1>
-    <section class="">
-       <h3>Earned Points:</h3>
-       <div class="question"></div>
+    <section class="main">
+    <h1 class="main__title">Who Wants to Be a Millionaire?</h1>
+    <section class="hero">
+       <h3 class="hero__points-title">Earned Points:</h3>
+       <h4 class="hero__question">Question:</h4>
        <div class="answers">
-       <button id="answer__1"></button>
-       <button id="answer__2"></button>
-       <button id="answer__3"></button>
-       <button id="answer__4"></button>
+       <button class="answer__1"></button>
+       <button class="answer__2"></button>
+       <button class="answer__3"></button>
+       <button class="answer__4"></button>
     </div>
+  </section>
         <!-- <form id="questionForm" class="form">
           <div class="form__wrapper">
             <div class="form__field">
@@ -49,6 +51,5 @@
             <button type="submit" class="form__submit">Play</button>
           </div>
         </form> -->
-    </section>
   </body>
 </html>
