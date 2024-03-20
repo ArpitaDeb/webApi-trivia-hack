@@ -7,11 +7,17 @@ h2 {
   @include heading-style;
   text-decoration: underline;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: $primary-colour;
+  margin: 0;
   font-family: sans-serif;
-  padding: $body-padding;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: aqua;
 }
 
 div {
@@ -22,32 +28,7 @@ div {
   @include card(1rem);
 }
 
-// block
-/* also a comment */
-.product {
-  @include card(2rem, blue);
 
-  // element
-  &__title {
-    text-decoration: none;
-    color: black;
-
-    &--large {
-      font-size: 150%;
-    }
-  }
-
-  // element
-  &__image {
-    max-width: 80%;
-    border: 2px solid orange;
-  }
-
-  &--featured {
-    background: linear-gradient(red, orange);
-    color: white;
-  }
-}
 .form {
   width: 100%;
   margin-left: 1rem;
