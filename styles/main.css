@@ -19,7 +19,6 @@ body {
   font-weight: 700;
 }
 /* Global styles */
-/* Global styles */
 body {
   font-family: "Comfortaa";
   background-image: linear-gradient(to bottom, #9370db, #c17dbf, #ffffff);
@@ -41,44 +40,53 @@ body {
 }
 
 /* Hero section */
-.hero {
-  max-width: 70%;
+.trivia {
+  margin: 16px;
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 768px) {
+  .trivia {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .trivia {
+    width: 60%;
+  }
+}
 
-.hero__status {
+.head {
+  font-size: 1.125rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #222222; /* Assuming $primary-colour is defined elsewhere */
 }
 
-.hero__points-title,
-.hero__question-title {
-  font-size: 1.125rem;
-  padding: 1rem;
-}
-
-.hero__earned-points {
+#correct-score {
   font-weight: 700;
 }
 
-.hero__question {
+.body__question {
   text-align: center;
-  padding: 1rem;
-  margin: 1rem 0rem;
+  font-size: 18px;
+  padding: 16px;
 }
 
-.hero__answer {
+.body__options {
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hero__answer button {
+.body__options li {
   font-family: "Comfortaa";
+  list-style-type: none;
   width: 70%;
   margin: 1rem 0rem;
   padding: 1.25rem;
@@ -92,23 +100,34 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Controls section */
-.controls {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 18px;
+#result {
+  padding: 16px;
 }
 
-.controls__btn {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+/* Controls section */
+.foot {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 12px;
+}
+
+#check-answer, #play-again {
+  min-width: -moz-min-content;
+  min-width: min-content;
+  max-width: 30%;
   font-family: "Comfortaa";
+  text-align: center;
   margin: 16px auto;
-  padding: 8px 25px;
+  padding: 5px 25px;
   background-color: white;
   border: 0.1px solid grey;
   border-radius: 3px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  #check-answer, #play-again {
+    padding: 8px 30px;
+  }
 }
 
 /* Footer section */
