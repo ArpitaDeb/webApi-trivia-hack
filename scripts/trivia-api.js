@@ -84,7 +84,6 @@ function showQuestion(data){
                 </li>`;
     }).join('');
     selectOption();
-    positionModal();
 }
 
 // Options selection

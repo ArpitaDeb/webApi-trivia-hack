@@ -11,14 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
     _correctScore.textContent = correctScore;
 });
 
-// Positioning popup
-function positionModal() {
-    const triviaHeight = trivia.offsetHeight;
-    const modalHeight = modal.offsetHeight;
-    const topPosition = (triviaHeight - modalHeight) / 2;
-    modal.style.top = `${topPosition}px`;
-}
-
 // Answer checking
 function checkAnswer(){
     _checkBtn.disabled = true;
