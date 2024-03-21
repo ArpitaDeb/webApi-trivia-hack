@@ -35,19 +35,33 @@ function showQuestion(data){
     optionsList.splice(Math.floor(Math.random() * (incorrectAnswers.length + 1)), 0, correctAnswer);
     
     _question.innerHTML = `${data.question} <br> <span class="category">${data.category}</span>`;
-    _options.innerHTML = optionsList.map((option, index) => `<li>${index + 1}. <span>${option}</span></li>`).join('');
+    _options.innerHTML = optionsList.map((option, index) => {
+        return `<li>
+                    <label>
+                        <input type="checkbox" name="option${index}" value="${option}">
+                        <span>${option}</span>
+                    </label>
+                </li>`;
+    }).join('');
     selectOption();
 }
 
 // Options selection
 function selectOption(){
     _options.querySelectorAll('li').forEach(option => {
-        option.addEventListener('click', () => {
-            if(_options.querySelector('.selected')){
-                const activeOption = _options.querySelector('.selected');
-                activeOption.classList.remove('selected');
-            }
+        const checkbox = option.querySelector('input[type="checkbox"]');
+        checkbox.addEventListener('click', () => {
+            // Uncheck all checkboxes
+            _options.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                if (cb !== checkbox) {
+                    cb.checked = false;
+                }
+            });
+            _options.querySelectorAll('li').forEach(opt => {
+                opt.classList.remove('selected');
+            });
             option.classList.add('selected');
         });
-    });
+        });
 }
+

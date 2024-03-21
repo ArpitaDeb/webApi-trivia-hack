@@ -80,6 +80,45 @@ padding: 16px;
   border: 0.1px solid grey;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.body__options li input[type="checkbox"] {
+  list-style-type: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $primary-colour; 
+  border-radius: 3px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.body__options li input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: $primary-colour; 
+  border-radius: 50%;
+}
+
+.body__options li label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.body__options li label span {
+  font-size: 1.125rem;
+}
+
 #result{
   padding: 16px;
 }
