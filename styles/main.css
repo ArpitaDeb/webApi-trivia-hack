@@ -137,6 +137,44 @@ body {
   }
 }
 
+.body__options li input[type=checkbox] {
+  list-style-type: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #222222;
+  border-radius: 3px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.body__options li input[type=checkbox]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #222222;
+  border-radius: 50%;
+}
+
+.body__options li label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.body__options li label span {
+  font-size: 1.125rem;
+}
+
 #result {
   padding: 1rem;
 }
@@ -171,4 +209,34 @@ body {
   #check-answer, #play-again {
     padding: 0.625rem 2.5rem;
   }
+}
+
+/* Footer section */
+.footer {
+  height: 30%;
+  margin: 16px 0px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
