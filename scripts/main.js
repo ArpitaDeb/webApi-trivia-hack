@@ -16,7 +16,7 @@ function checkAnswer(){
     _checkBtn.disabled = true;
     const feedbackText = document.getElementById('feedbackText'); // Get the feedback text container
     const feedbackModal = document.getElementById('feedbackModal'); // Get the modal
-    const closeBtn = document.querySelector('.close'); // Get the close button
+    const closeBtn = document.querySelector('.modal-content__close'); // Get the close button
 
     if(_options.querySelector('.selected')){
         let selectedAnswer = _options.querySelector('.selected span').textContent;
