@@ -217,18 +217,36 @@ body {
   margin: 16px 0px;
 }
 
+.modal {
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    font-size: 1.25rem;
+  }
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #222222;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
+  width: 70%;
+  height: 40%;
 }
 
 /* The Close Button */
-.close {
-  color: #aaa;
+.modal-content__close {
+  color: #9370db;
   float: right;
   font-size: 28px;
   font-weight: bold;
