@@ -1,17 +1,7 @@
-const _question = document.getElementById('question');
-const _options = document.querySelector('.quiz-options');
-const _checkBtn = document.getElementById('check-answer');
-const _playAgainBtn = document.getElementById('play-again');
-const _result = document.getElementById('result');
-const _correctScore = document.getElementById('correct-score');
-const _totalQuestion = document.getElementById('total-question');
-
-let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
-
 // Event listeners
 function eventListeners(){
     _checkBtn.addEventListener('click', checkAnswer);
-    _playAgainBtn.addEventListener('click', restartQuiz);
+    _playAgainBtn.addEventListener('click', restartTrivia);
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -58,7 +48,7 @@ function setCount(){
     _correctScore.textContent = correctScore;
 }
 
-function restartQuiz(){
+function restartTrivia(){
     correctScore = askedCount = 0;
     _playAgainBtn.style.display = "none";
     _checkBtn.style.display = "block";

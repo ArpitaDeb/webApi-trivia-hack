@@ -6,11 +6,32 @@
     <title>Trivia | Who Wants to Be a Millionaire?</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="./scripts/main.js" defer></script>
-    <script src="./scripts/trivia-api.js" type="module" defer></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/trivia-api.js" type="module"></script>
   </head>
-  <body>
-    <h1 class="title">Who Wants to Be a Millionaire?</h1>
+  <body class = "flex">
+    <div class = "wrapper">
+      <div class = "trivia-container">
+          <div class = "trivia-head">
+              <h1 class = "trivia-title">Trivia Game</h1>
+              <div class = "trivia-score flex">
+                  <span id = "correct-score"></span>/<span id = "total-question"></span>
+              </div>
+          </div>
+          <div class = "trivia-body">
+              <h2 class = "trivia-question" id = "question"></h2>
+              <ul class = "trivia-options">
+              </ul>
+              <div id = "result">
+              </div>
+          </div>
+          <div class = "trivia-foot">
+              <button type = "button" id = "check-answer">Check Answer</button>
+              <button type = "button" id = "play-again">Play Again!</button>
+          </div>
+      </div>
+  </div>
+    <!-- <h1 class="title">Who Wants to Be a Millionaire?</h1>
     <section class="">
        <h3>Earned Points:</h3>
        <div class="question"></div>
@@ -19,7 +40,7 @@
        <button id="answer__2"></button>
        <button id="answer__3"></button>
        <button id="answer__4"></button>
-    </div>
+    </div> -->
         <!-- <form id="questionForm" class="form">
           <div class="form__wrapper">
             <div class="form__field">
@@ -49,6 +70,8 @@
             <button type="submit" class="form__submit">Play</button>
           </div>
         </form> -->
-    </section>
+    <!-- </section> -->
+    <script src="./scripts/trivia-api.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
