@@ -22,6 +22,8 @@ body {
 body {
   font-family: "Comfortaa";
   background-image: linear-gradient(to bottom, #9370db, #c17dbf, #ffffff);
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: #222222;
 }
 
@@ -41,7 +43,7 @@ body {
 
 /* Hero section */
 .trivia {
-  margin: 16px;
+  margin: 1rem;
   max-width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
@@ -49,7 +51,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .trivia {
-    width: 50%;
+    width: 80%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -60,11 +62,16 @@ body {
 
 .head {
   font-size: 1.125rem;
-  padding: 1rem;
+  padding: 0rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #222222; /* Assuming $primary-colour is defined elsewhere */
+  border-bottom: 1px solid grey;
+}
+@media screen and (min-width: 1280px) {
+  .head {
+    padding: 0rem 3rem;
+  }
 }
 
 #correct-score {
@@ -73,15 +80,33 @@ body {
 
 .body__question {
   text-align: center;
-  font-size: 18px;
-  padding: 16px;
+  font-size: 1.125rem;
+  padding: 0rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .body__options {
+  margin: 1rem;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .body__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .body__options {
+    margin: 1rem 3rem;
+  }
 }
 
 .body__options li {
@@ -98,6 +123,18 @@ body {
   background-color: transparent;
   border: 0.1px solid grey;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .body__options li {
+    width: 40%;
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .body__options li {
+    width: 40%;
+  }
 }
 
 .body__options li input[type=checkbox] {
@@ -139,14 +176,14 @@ body {
 }
 
 #result {
-  padding: 16px;
+  padding: 1rem;
 }
 
 /* Controls section */
 .foot {
   display: flex;
   justify-content: space-evenly;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 #check-answer, #play-again {
@@ -155,16 +192,22 @@ body {
   max-width: 30%;
   font-family: "Comfortaa";
   text-align: center;
-  margin: 16px auto;
-  padding: 5px 25px;
-  background-color: white;
+  margin: 1rem auto;
+  padding: 0.32rem 1.6rem;
+  background-color: #222222;
+  color: white;
   border: 0.1px solid grey;
   border-radius: 3px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 768px) {
   #check-answer, #play-again {
-    padding: 8px 30px;
+    padding: 0.5rem 1.875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #check-answer, #play-again {
+    padding: 0.625rem 2.5rem;
   }
 }
 
@@ -172,28 +215,15 @@ body {
 .footer {
   height: 30%;
   margin: 16px 0px;
-}/*# sourceMappingURL=main.css.map */
-
-/* The Modal (background) */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; 
+  width: 50%;
 }
 
 /* The Close Button */
@@ -209,4 +239,4 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
+}/*# sourceMappingURL=main.css.map */
