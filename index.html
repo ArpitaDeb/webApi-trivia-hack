@@ -1,104 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TriviaGame | Team 8</title>
-  <link rel="stylesheet" href="./styles/main.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-  <script src="./scripts/main.js"></script>
-  <script src="./scripts/trivia-api.js" defer></script>
-</head>
-
-<body>
-  <section class="main">
-    <h1 class="main__title">Trivia Game</h1>
-    <section class="hero">
-      <div class="hero__status">
-        <h4 class="hero__question-title">Question ⬇️</h4>
-        <h4 class="hero__points-title">Earned Points: <span class="hero__earned-points"></span>/10</h4>
-      </div>
-      <div class="hero__question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda quis illo soluta
-        esse qui velit veniam atque, tempore ab quam officiis architecto officia asperiores maxime corrupti quibusdam a,
-        sit quae!</div>
-      <div class="hero__answer">
-        <button class="answer__1">Answer</button>
-        <button class="answer__2">Answer</button>
-        <button class="answer__3">Answer</button>
-        <button class="answer__4">Answer</button>
-      </div>
-      <div class="controls">
-        <button class="controls__btn">Check Answer</button>
-        <button class="controls__btn">Play Again</button>
-      </div>
-    </section>
-
-    <body class="flex">
-      <div class="wrapper">
-        <div class="trivia-container">
-          <div class="trivia-head">
-            <h1 class="trivia-title">Trivia Game</h1>
-            <div class="trivia-score flex">
-              <span id="correct-score"></span>/<span id="total-question"></span>
-            </div>
-          </div>
-          <div class="trivia-body">
-            <h2 class="trivia-question" id="question"></h2>
-            <ul class="trivia-options">
-            </ul>
-            <div id="result">
-            </div>
-          </div>
-          <div class="trivia-foot">
-            <button type="button" id="check-answer">Check Answer</button>
-            <button type="button" id="play-again">Play Again!</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TriviaGame | Team 8</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/trivia-api.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="main__title">Trivia Game</h1>
+      <div class="trivia">
+        <div class="head">
+          <h3 class="head__question">Question ⬇️</h3>
+          <div class="head__score">
+            <span id="correct-score"></span>/<span id="total-question"></span>
           </div>
         </div>
+        <div class="body">
+          <h2 class="body__question" id="question"></h2>
+          <ul class="body__options"></ul>
+          <div id="result"></div>
+        </div>
+        <div class="foot">
+          <button type="button" id="check-answer">Check Answer</button>
+          <button type="button" id="play-again">Play Again!</button>
+        </div>
       </div>
-      <footer class="footer">
-
-      </footer>
-    </body>
-
+    </div>
+    <footer class="footer"></footer>
+  </body>
 </html>
-<!-- <h1 class="title">Who Wants to Be a Millionaire?</h1>
-    <section class="">
-       <h3>Earned Points:</h3>
-       <div class="question"></div>
-       <div class="answers">
-       <button id="answer__1"></button>
-       <button id="answer__2"></button>
-       <button id="answer__3"></button>
-       <button id="answer__4"></button>
-    </div> -->
-<!-- <form id="questionForm" class="form">
-          <div class="form__wrapper">
-            <div class="form__field">
-                <label for="category">Choose a category:</label>
-              <select id="category" name="category">
-                    <option value="celebrities">Celebrities</option>
-                    <option value="history">History</option>
-                    <option value="art">Art</option>
-              </select>
-            </div>
-            <div class="form__field">
-                <label for="difficulty">Choose difficulty:</label>
-              <select id="difficulty" name="difficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-              </select>
-            </div>
-            <div class="form__field">
-                <label for="type">Choose type:</label>
-              <select id="type" name="type">
-                    <option value="multiple">Multiple Choice</option>
-                    <option value="true or false">True / False</option>
-                    <option value="any type">Any Type</option>
-              </select>
-            </div>
-            <button type="submit" class="form__submit">Play</button>
-          </div>
-        </form> -->
-<!-- </section> -->
