@@ -220,8 +220,8 @@ body {
 .modal {
   font-size: 1rem;
   display: none;
-  position: absolute;
-  top: 70%;
+  position: fixed;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
@@ -241,7 +241,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   width: 70%;
-  height: 40%;
+  height: 30%;
 }
 
 /* The Close Button */
