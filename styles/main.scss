@@ -1,90 +1,102 @@
-@use "partials/reset";
-@use "partials/variables" as *;
-@use "partials/mixins" as *;
+@use "../partials/reset" as *;
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+@use "../partials/fonts" as *;
 
-h1,
-h2 {
-  @include heading-style;
-  text-decoration: underline;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+/* Global styles */
+/* Global styles */
 body {
-  margin: 0;
-  font-family: sans-serif;
+  font-family: 'Comfortaa';
+  background-image: linear-gradient(to bottom, #9370db, #c17dbf, #ffffff);
+  color: $primary-colour;
+}
+
+/* Main section */
+.main {
+  height: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  background-color: aqua;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-div {
-  padding: $body-padding;
+.main__title {
+  font-size: 2.5rem;
 }
 
-.card {
-  @include card(1rem);
+/* Hero section */
+.hero {
+  max-width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+.hero__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $primary-colour; /* Assuming $primary-colour is defined elsewhere */
+}
 
-.form {
-  width: 100%;
-  margin-left: 1rem;
-  @include tablet {
-      
-  }
-  &__wrapper {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-  &__field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  &__headings {
-    color: $color-silver;
-    @include form-label;
-  }
-  &__input {
-    color: $color-dark-sec;
-    font-family: $font-primary;
-    font-size: 1rem;
-    border-radius: .3em;
-    border: 1px solid $color-mercury-sec;
-    background-color: $color-Alabaster-sec;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    &:focus {
-      border: 1px solid $color-dark;
-      outline: none;
-      background-color: $color-white;
-    }
-    &--error {
-      border: 1px solid $color-error;
-    }
-    &--textarea {
-      @extend .form__input;
-      height: 5rem;
-    }
-   
-  }
-  &__submit {
-    @include styled-button;
-    color: $color-white;
-    background-color: $color-dark;
-    padding: 1rem 0;
-    margin: 1rem 0;
-    border-radius: .3em;
-    width: 100%;
-    @include tablet {
-      max-width: 12rem;
-      align-self: flex-end;
-    }
-  }
+.hero__points-title,
+.hero__question-title {
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+
+.hero__earned-points {
+  font-weight: 700;
+}
+
+.hero__question {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0rem;
+}
+
+.hero__answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__answer button {
+  font-family: 'Comfortaa';
+  width: 70%;
+  margin: 1rem 0rem;
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  text-align: left;
+  border-radius: 5px;
+  border: none;
+  color: $primary-colour;
+  background-color: transparent;
+  border: 0.1px solid grey;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;;
+}
+
+.controls__btn {
+  max-width: fit-content;
+  font-family: 'Comfortaa';
+  margin: 16px auto;
+  padding: 8px 25px;
+  background-color: white;
+  border: 0.1px solid grey;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer section */
+.footer {
+  height: 30%;
+  margin: 16px 0px;
 }
