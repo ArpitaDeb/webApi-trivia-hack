@@ -1,9 +1,9 @@
-@use "variables" as *;
+// @use "variables" as *;
 
-@mixin heading-style {
-  font-size: $heading-font-size;
-  color: darkmagenta;
-}
+// @mixin heading-style {
+//   font-size: $heading-font-size;
+//   color: darkmagenta;
+// }
 
 @mixin card($padding, $font-colour: black) {
   padding: $padding;
