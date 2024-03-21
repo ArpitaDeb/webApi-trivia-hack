@@ -1,5 +1,5 @@
 const _question = document.getElementById('question');
-const _options = document.querySelector('.trivia-options');
+const _options = document.querySelector('.body__options');
 const _checkBtn = document.getElementById('check-answer');
 const _playAgainBtn = document.getElementById('play-again');
 const _result = document.getElementById('result');
